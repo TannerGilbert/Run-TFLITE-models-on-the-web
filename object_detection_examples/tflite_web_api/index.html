@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TFLITE Web API Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>TFLITE Web API Object Detection Example </h1>
+    <div class="img-container">
+        <img src="https://storage.googleapis.com/tfweb/demos/static/obj_detection.jpeg" crossorigin="anonymous" />
+        <div class="boxes-container"></div>
+    </div>
+    <div class="btn">Detect</div>
+    <div class="result"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-tflite@0.0.1-alpha.6/dist/tf-tflite.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
