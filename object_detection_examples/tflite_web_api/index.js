@@ -4,9 +4,6 @@ let objectDetector;
 
 /** Detect objects in image. */
 async function detect() {
-
-    console.log(tflite.ObjectDetector)
-
     resultEle.textContent = "Loading...";
     if (!objectDetector) {
         objectDetector = await tflite.ObjectDetector.create(
@@ -31,15 +28,17 @@ function renderDetectionResult(result) {
         const name = curObject.classes[0].className;
         const score = curObject.classes[0].probability;
 
-        const boxContainer = createDetectionResultBox(
-            boundingBox.originX,
-            boundingBox.originY,
-            boundingBox.width,
-            boundingBox.height,
-            name,
-            score
-        );
-        boxesContainer.appendChild(boxContainer);
+        if (score > 0.5) {
+            const boxContainer = createDetectionResultBox(
+                boundingBox.originX,
+                boundingBox.originY,
+                boundingBox.width,
+                boundingBox.height,
+                name,
+                score
+            );
+            boxesContainer.appendChild(boxContainer);
+        } 
     }
 }
 

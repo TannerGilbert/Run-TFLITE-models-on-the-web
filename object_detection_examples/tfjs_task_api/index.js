@@ -30,15 +30,17 @@ function renderDetectionResult(result) {
         const name = curObject.className;
         const score = curObject.score;
 
-        const boxContainer = createDetectionResultBox(
-            boundingBox.originX,
-            boundingBox.originY,
-            boundingBox.width,
-            boundingBox.height,
-            name,
-            score
-        );
-        boxesContainer.appendChild(boxContainer);
+        if (score > 0.5) {
+            const boxContainer = createDetectionResultBox(
+                boundingBox.originX,
+                boundingBox.originY,
+                boundingBox.width,
+                boundingBox.height,
+                name,
+                score
+            );
+            boxesContainer.appendChild(boxContainer);
+        }
     }
 }
 
