@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TFLITE Web API Live Object Detection Example</title>
+    <meta charset="utf-8">
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css">
+  </head>  
+  <body>
+    <h1>TFLITE Web API Live Object Detection Example</h1>
+    
+    <section id="demos" class="invisible">
+
+      <p>Hold some objects up close to your webcam to get a real-time classification! When ready click "enable webcam" below and accept access to the webcam when the browser asks (check the top left of your window)</p>
+      
+      <div id="liveView" class="camView">
+        <button id="webcamButton">Enable Webcam</button>
+        <video id="webcam" autoplay muted width="640" height="480"></video>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
+    <!-- Load the coco-ssd model to use to recognize things in images -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-tflite@0.0.1-alpha.6/dist/tf-tflite.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
