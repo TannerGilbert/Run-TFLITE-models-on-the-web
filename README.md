@@ -30,6 +30,14 @@ The TFJS Task API provides an unified experience for running task-specific machi
 
 The TFLITE Web API allows users to run arbitrary TFLite models on the web. Users can load a TFLite model from a URL, use TFJS tensors to set the model's input data, run inference, and get the output back in TFJS tensors. Furthermore the library also includes some helper classes that help with certain model types like [Object Detection models](https://github.com/tensorflow/tfjs/blob/master/tfjs-tflite/src/tflite_task_library_client/object_detector.ts#L58).
 
+## Examples
+
+![Live object detection example](doc/live_object_detection_example.png)
+
+* [Live object detection](live_object_detection_example)
+* [Image Segmentation](https://codepen.io/jinjingforever/pen/yLMYVJw)
+* [CartoonGAN](https://codepen.io/jinjingforever/pen/xxgWRaE)
+
 ### Resources
 
 * https://codepen.io/jinjingforever/pen/rNjbWeR
